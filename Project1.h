@@ -58,3 +58,28 @@ int BinarySearch(int* arr, int size, int target)
 		mid = (first + last)/2;
 	}
 };
+
+void BubbleSort(int* arr, int size)
+{
+	//first loop will make sure i go through all the numbers
+	for (int j = 0; j < size - 1; j++)
+	{
+		for (int i = 0; i < size - 1; i++)
+		{
+			if (arr[i] > arr[i+1])
+			{
+				int temp = arr[i];
+				arr[i] = arr[i+1];
+				arr[i+1] = temp;
+			}
+		}
+	}
+	cout << "Array = [";
+	for (int i = 0; i < size; i++)
+	{
+		cout << arr[i];
+		if (i < size-1)
+			cout << ',';
+	}
+	cout << "]" << endl;
+}
