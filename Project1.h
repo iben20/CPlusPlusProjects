@@ -29,3 +29,32 @@ void SelectionSort(int* arr, int size)
 		show(arr, size);
 	}
 };
+
+int BinarySearch(int* arr, int size, int target)
+{
+	int first, mid, last;
+
+	first = 0;
+	last = size;
+	mid = (first+last)/2;
+
+	cout << "Mid = " << mid << endl;
+
+	while (first <= last)
+	{
+		if (target > arr[mid])
+		{
+			first = mid + 1;
+		}
+
+		else if (target < arr[mid])
+		{
+			last = mid - 1;
+		}
+
+		else
+			return mid;
+
+		mid = (first + last)/2;
+	}
+};
