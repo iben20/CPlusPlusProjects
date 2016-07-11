@@ -61,7 +61,6 @@ int BinarySearch(int* arr, int size, int target)
 
 void BubbleSort(int* arr, int size)
 {
-	//first loop will make sure i go through all the numbers
 	for (int j = 0; j < size - 1; j++)
 	{
 		for (int i = 0; i < size - 1; i++)
